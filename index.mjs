@@ -16,3 +16,8 @@ app.post('/data', (req, res) => {
   res.send(`Data received: ${JSON.stringify(data)}`);
 });
 
+app.put('/data/:id', (req, res) => {
+  const id = req.params.id;
+  const updatedData = req.body;
+  res.send(`Data with ID ${id} updated to: ${JSON.stringify(updatedData)}`);
+});
