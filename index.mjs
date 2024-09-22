@@ -27,3 +27,6 @@ app.delete('/data/:id', (req, res) => {
   res.send(`Data with ID ${id} deleted`);
 });
 
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
