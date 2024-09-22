@@ -21,3 +21,9 @@ app.put('/data/:id', (req, res) => {
   const updatedData = req.body;
   res.send(`Data with ID ${id} updated to: ${JSON.stringify(updatedData)}`);
 });
+
+app.delete('/data/:id', (req, res) => {
+  const id = req.params.id;
+  res.send(`Data with ID ${id} deleted`);
+});
+
